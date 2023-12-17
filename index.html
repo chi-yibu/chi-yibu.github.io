@@ -1,664 +1,598 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-
+<!DOCTYPE html>
+<html lang="en" >
+ 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>山河大学|ShanHe University</title>
-    <meta name="description" content="一所由山河四省建立的网络高校。">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-    <!-- Place favicon.ico in the root directory -->
-
-    <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/gijgo.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/slicknav.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+ <meta charset="UTF-8">
+ 
+ <title></title>
+ 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+ 
+ <style>
+  * 
+  {
+   box-sizing: border-box;
+  }
+ 
+ 
+  body 
+  {
+   margin: 0;
+   height: 100vh;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #161616;
+   color: #c5a880;
+   font-family: sans-serif;
+  }
+ 
+ 
+  label
+  {
+   display: inline-block;
+   background-color: #161616;
+   padding: 16px;
+   border-radius: 0.3rem;
+   cursor: pointer;
+   margin-top: 1rem;
+   width: 300px;
+   border-radius: 10px;
+   border: 1px solid #c5a880;
+   text-align: center;
+  }
+ 
+ 
+  ul 
+  {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+  }
+ 
+ 
+  .btn
+  {
+   background-color: #161616;
+   border-radius: 10px;
+   color: #c5a880;
+   border: 1px solid #c5a880;
+   padding: 16px;
+   width: 300px;
+   margin-bottom: 16px;
+   line-height: 1.5;
+   cursor: pointer;
+  }
+  .separator
+  {
+   font-weight: bold;
+   text-align: center;
+   width: 300px;
+   margin: 16px 0px;
+   color: #a07676;
+  }
+ 
+ 
+  .title 
+  {
+   color: #a07676;
+   font-weight: bold;
+   font-size: 1.25rem;
+   margin-bottom: 16px;
+  }
+ 
+ 
+  .text-loading 
+  {
+   font-size: 2rem;
+  }
+ </style>
+ 
+ <script>
+  window.console = window.console || function(t) {};
+ </script>
+ 
+ <script>
+  if (document.location.search.match(/type=embed/gi)) {
+   window.parent.postMessage("resize", "*");
+  }
+ </script>
+ 
+ 
 </head>
-
-<body>
-
-    <header>
-        <div class="header-area ">
-            <div class="header-top_area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="header_top_wrap d-flex justify-content-between align-items-center">
-                                <div class="text_wrap">
-                                    <p><span>Q Q 群：66666666</span> <span>微 信 公 众 号：嗷嗷嗷</span></p>
-                                </div>
-                                <!-- <div class="text_wrap">
-                                    <p><a href="#"> <i class="ti-user"></i>  Login</a> <a href="#">Register</a></p>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="sticky-header" class="main-header-area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="header_wrap d-flex justify-content-between align-items-center">
-                                <div class="header_left">
-                                    <div class="logo">
-                                        <a href="index.html">
-                                            <img src="img/logo2.png" alt="" width="auto">
-                                        </a>
-                                        <!-- <h1 style="display: inline-flex;margin: 0 auto;">山河大学</h1> -->
-                                    </div>
-                                </div>
-                                <div class="header_right d-flex align-items-center">
-                                    <div class="main-menu  d-none d-lg-block">
-                                        <nav>
-                                            <ul id="navigation">
-                                                <li><a href="index.html">首页</a></li>
-                                                <li><a href="#">课程体系</a></li>
-                                                <li><a href="#">院系 <i class="ti-angle-down"></i></a>
-                                                    <ul class="submenu">
-                                                        <li><a href="#">自然科学和工程</a></li>
-                                                        <li><a href="#">人文社会科学</a></li>
-                                                        <li><a href="#">医学和生命科学</a></li>
-                                                        <li><a href="#">商业和管理</a></li>
-                                                        <li><a href="#">农业和环境科学</a></li>
-                                                        <li><a href="#">其他</a></li>
-                                                    </ul>
-                                                </li>
-                                                <!-- <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                                    <ul class="submenu"> -->
-                                                <li><a href="#">教育教学</a></li>
-                                                <li><a href="#">科学研究</a></li>
-                                                <li><a href="#">校园生活</a></li>
-                                                <!-- </ul>
-                                                </li> -->
-                                                <li><a href="#">山河大概况</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                    <!-- <div class="Appointment">
-                                        <div class="book_btn d-none d-lg-block">
-                                            <a data-scroll-nav='1' href="#">Apply NOw</a>
-                                        </div>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- header-end -->
-
-    <!-- slider_area_start -->
-    <div class="slider_area">
-        <div class="slider_active owl-carousel">
-            <!-- single_carouse -->
-            <div class="single_slider  d-flex align-items-center slider_bg_1">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="slider_text ">
-                                <h3>欢迎来到山河大学-Welcome to ShanHe University.</h3>
-                                <!-- <a href="#" class="boxed-btn3">Get Start</a>
-                                <a href="#" class="boxed-btn4">Take a tour</a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/ single_carouse -->
-            <!-- single_carouse -->
-            <div class="single_slider  d-flex align-items-center slider_bg_2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="slider_text ">
-                                <h3>热烈祝贺2023届毕业生圆满完成学业</h3>
-                                <!-- <a href="#" class="boxed-btn3">Get Start</a>
-                                <a href="#" class="boxed-btn4">Take a tour</a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/ single_carouse -->
-            <!-- single_carouse -->
-            <div class="single_slider  d-flex align-items-center slider_bg_3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="slider_text ">
-                                <h3>山河四省:晋冀鲁豫</h3>
-                                <!-- <a href="#" class="boxed-btn3">Get Start</a>
-                                <a href="#" class="boxed-btn4">Take a tour</a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/ single_carouse -->
-        </div>
-    </div>
-    <!-- slider_area_end -->
-
-    <!-- service_area_start  -->
-    <div class="service_area gray_bg">
-        <div class="container">
-            <div class="row justify-content-center ">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_service d-flex align-items-center ">
-                        <div class="icon">
-                            <i class="flaticon-school"></i>
-                        </div>
-                        <div class="service_info">
-                            <h4>学生人数</h4>
-                            <p>9999999+</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_service d-flex align-items-center ">
-                        <div class="icon">
-                            <i class="flaticon-error"></i>
-                        </div>
-                        <div class="service_info">
-                            <h4>就业率</h4>
-                            <p>100%</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_service d-flex align-items-center ">
-                        <div class="icon">
-                            <i class="flaticon-book"></i>
-                        </div>
-                        <div class="service_info">
-                            <h4>师资力量</h4>
-                            <p>9999+</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--/ service_area_start  -->
-<div style="text-align: center; background-color: brown; color: aliceblue;height: 100px;">
-    <a href="tzs.html" ><h1 style="color: aliceblue;line-height: 100px;">点我！领 取通 知 书~</h1></a></div>
-    <!-- popular_program_area_start  -->
-    <div class="popular_program_area section__padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section_title text-center">
-                        <h3>山河大·鸟瞰校园</h3>
-                    </div>
-                </div>
-            </div>
-            <div><img src="img/program/map.jpeg" alt="" srcset="" style="width: 100%;"></div>
-
-        </div>
-    </div>
-
-    <!-- <div class="row">
-        <div class="col-lg-5">
-            <div class="course_all_btn text-center">
-                <a href="Courses.html" class="boxed-btn4">查看课程体系</a>
-            </div>
-        </div>
-    </div> -->
-    </div>
-    </div>
-    <!-- popular_program_area_end -->
-
-    <!-- latest_coures_area_start  -->
-    <div class="latest_coures_area">
-        <div class="latest_coures_inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="coures_info">
-                            <div class="section_title white_text">
-                                <h3>校园生活</h3>
-                                <p>山河大学现有文科馆等图书馆5座，校史馆等各类场地展馆6座，正大体育馆等各种体育场馆10余座，<br>
-                                    室外运动场面积共计160221平方米，拥有室内外篮球、排球、网球、羽毛球等项目场馆<br>
-                                    ，配套设施齐全，能够为师生提供各种文体服务项目，为各类校园文体活动提供了硬件支持，能够满足师生多样化的校园文体生活和活动需要。</p>
-                            </div>
-                            <div class="coures_wrap d-flex">
-                                <div class="single_wrap">
-                                    <div class="icon">
-                                        <i class="flaticon-lab"></i>
-                                    </div>
-                                    <h4>领取专属毕业戒指，愿你一路繁花似锦</h4>
-                                    <p>时光的河入海流，又到一年毕业季，骊歌互唱，难诉离别，纵有千般不舍，万般留念，也将化成对你们最美好的祝...</p>
-                                    <a href="#" class="boxed-btn5">Apply NOw</a>
-                                </div>
-                                <div class="single_wrap">
-                                    <div class="icon">
-                                        <i class="flaticon-lab"></i>
-                                    </div>
-                                    <h4>欢迎报名全国优秀大学生夏令营</h4>
-                                    <p>我校今年继续举办“全国优秀大学生夏令营活动”（以下简称夏令营活动），作为招收推荐免试研究生（包括推...</p>
-                                    <a href="#" class="boxed-btn5">Apply NOw</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--/ latest_coures_area_end -->
-
-    <!-- recent_event_area_strat  -->
-    <div class="recent_event_area section__padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
-                    <div class="section_title text-center mb-70">
-                        <h3 class="mb-45">通知公告</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="single_event d-flex align-items-center">
-                        <div class="date text-center">
-                            <span>02</span>
-                            <p>Dec, 2023</p>
-                        </div>
-                        <div class="event_info">
-                            <a href="event_details.html">
-                                <h4>全球人才招聘，欢迎加盟!</h4>
-                            </a>
-                            <p><span> <i class="flaticon-clock"></i> 10:30 pm</span> <span> <i
-                                        class="flaticon-calendar"></i> 21Nov 2023 </span> <span> <i
-                                        class="flaticon-placeholder"></i> AH Oditoriam</span> </p>
-                        </div>
-                    </div>
-                    <div class="single_event d-flex align-items-center">
-                        <div class="date text-center">
-                            <span>03</span>
-                            <p>Dec, 2023</p>
-                        </div>
-                        <div class="event_info">
-                            <a href="event_details.html">
-                                <h4>建筑设计研究院招聘高级专业技术人员启事</h4>
-                            </a>
-                            <p><span> <i class="flaticon-clock"></i> 10:30 pm</span> <span> <i
-                                        class="flaticon-calendar"></i> 21Nov 2023 </span> <span> <i
-                                        class="flaticon-placeholder"></i> AH Oditoriam</span> </p>
-                        </div>
-                    </div>
-                    <div class="single_event d-flex align-items-center">
-                        <div class="date text-center">
-                            <span>10</span>
-                            <p>Dec, 2023</p>
-                        </div>
-                        <div class="event_info">
-                            <a href="event_details.html">
-                                <h4>国际教育学院面向海内外招聘英才</h4>
-                            </a>
-                            <p><span> <i class="flaticon-clock"></i> 10:30 pm</span> <span> <i
-                                        class="flaticon-calendar"></i> 21Nov 2023 </span> <span> <i
-                                        class="flaticon-placeholder"></i> AH Oditoriam</span> </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- recent_event_area_end  -->
-
-    <!-- latest_coures_area_start  -->
-    <div data-scroll-index='1' class="admission_area">
-        <div class="admission_inner">
-            <div class="container">
-                <div class="row justify-content-end">
-                    <div class="col-lg-7">
-                        <div class="admission_form">
-                            <h3>报名表</h3>
-                            <form action="#">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="single_input">
-                                            <input type="text" placeholder="姓">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="single_input">
-                                            <input type="text" placeholder="名">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="single_input">
-                                            <input type="text" placeholder="手机号">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="single_input">
-                                            <input type="text" placeholder="电子邮箱">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="single_input">
-                                            <textarea cols="30" placeholder="留言" rows="10"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="apply_btn">
-                                            <button class="boxed-btn3" type="submit">提交</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--/ latest_coures_area_end -->
-
-
-    <!-- recent_news_area_start  -->
-    <div class="recent_news_area section__padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
-                    <div class="section_title text-center mb-70">
-                        <h3 class="mb-45">山河大·要闻</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="single__news">
-                        <div class="thumb">
-                            <a href="single-blog.html">
-                                <img src="img/news/d1.jpg" alt="">
-                            </a>
-                            <span class="badge">学术</span>
-                        </div>
-                        <div class="news_info">
-                            <a href="single-blog.html">
-                                <h4>山河大团队创造出新物质，成果登上《自然》</h4>
-                            </a>
-                            <p class="d-flex align-items-center"> <span><i class="flaticon-calendar-1"></i> May 10,
-                                    2023</span>
-
-                                <span> <i class="flaticon-comment"></i> 01 comments</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="single__news">
-                        <div class="thumb">
-                            <a href="single-blog.html">
-                                <img src="img/news/640.jpg" alt="">
-                            </a>
-                            <span class="badge bandge_2">生活</span>
-                        </div>
-                        <div class="news_info">
-                            <a href="single-blog.html">
-                                <h4>山河大学2023年夏季研究生毕业典礼举行</h4>
-                            </a>
-                            <p class="d-flex align-items-center"> <span><i class="flaticon-calendar-1"></i> May 10,
-                                    2023</span>
-
-                                <span> <i class="flaticon-comment"></i> 01 comments</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- recent_news_area_end  -->
-
-    <!-- footer start -->
-    <footer class="footer">
-        <div class="footer_top">
-            <div class="container">
-                <div class="newsLetter_wrap">
-                    <div class="row justify-content-between">
-                        <div class="col-md-7">
-                            <div class="footer_widget">
-                                <h3 class="footer_title">
-                                    合作院校
-                                </h3>
-                                <div class="gift__container grid">
-                                    <article class="gift__card" data-sr-id="9"
-                                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s, transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s;">
-                                        <img src="img/img/吉林冷面大学.jpg" alt="" class="gift__img">
-                                        <i class="bx bx-heart gift__icon"></i>
-
-
-                                        <span class="gift__title">@吉林冷面大学</span>
-                                    </article>
-
-                                    <article class="gift__card" data-sr-id="10"
-                                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s, transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s;">
-                                        <img src="img/img/河南油馍头大学.jpg" alt="" class="gift__img">
-                                        <i class="bx bx-heart gift__icon"></i>
-
-
-                                        <span class="gift__title">@河南油馍头大学</span>
-                                    </article>
-
-                                    <article class="gift__card" data-sr-id="11"
-                                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s, transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s;">
-                                        <img src="img/img/江西泥巴研究院.jpg" alt="" class="gift__img">
-                                        <i class="bx bx-heart gift__icon"></i>
-
-
-                                        <span class="gift__title">@江西泥巴研究院</span>
-                                    </article>
-
-                                    <article class="gift__card" data-sr-id="12"
-                                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s, transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s;">
-                                        <img src="img/img/广东凉茶大学.jpg" alt="" class="gift__img">
-                                        <i class="bx bx-heart gift__icon"></i>
-
-
-                                        <span class="gift__title">@广东凉茶大学</span>
-                                    </article>
-
-                                    <article class="gift__card" data-sr-id="13"
-                                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s, transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s;">
-                                        <img src="img/img/河南胡辣汤大学.jpg" alt="" class="gift__img">
-                                        <i class="bx bx-heart gift__icon"></i>
-
-
-                                        <span class="gift__title">@河南胡辣汤大学</span>
-                                    </article>
-
-                                    <article class="gift__card" data-sr-id="14"
-                                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s, transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s;">
-                                        <img src="img/img/浙江小笼包大学.jpg" alt="" class="gift__img">
-                                        <i class="bx bx-heart gift__icon"></i>
-
-
-                                        <span class="gift__title">@浙江小笼包大学</span>
-                                    </article>
-
-                                    <article class="gift__card" data-sr-id="15"
-                                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s, transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s;">
-                                        <img src="img/img/西南F4折耳根大学.jpg" alt="" class="gift__img">
-                                        <i class="bx bx-heart gift__icon"></i>
-
-
-                                        <span class="gift__title">@西南F4折耳根大学</span>
-                                    </article>
-
-                                    <article class="gift__card" data-sr-id="16"
-                                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s, transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s;">
-                                        <img src="img/img/山东煎饼大学.jpg" alt="" class="gift__img">
-                                        <i class="bx bx-heart gift__icon"></i>
-
-
-                                        <span class="gift__title">@山东煎饼大学</span>
-                                    </article>
-                                    <article class="gift__card" data-sr-id="16"
-                                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s, transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.4s;">
-                                        <img src="img/img/武汉热干面大学.jpg" alt="" class="gift__img">
-                                        <i class="bx bx-heart gift__icon"></i>
-
-
-                                        <span class="gift__title">@武汉热干面大学</span>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-lg-5">
-                            <div class="footer_widget">
-                                <h3 class="footer_title">
-                                    分校区
-                                </h3>
-                                <div class="fxq">
-                                    <ul>
-
-                                        <li><a href="https://www.sxu.edu.cn/"><img
-                                                    src="https://www.sxu.edu.cn/images/footlogo.jpg" alt=""
-                                                    srcset=""></a></li>
-                                        <li><a href="https://www.sdu.edu.cn/#"><img
-                                                    src="https://www.sdu.edu.cn/images/logo.png" alt="" srcset=""></a>
-                                        </li>
-                                        <li><a href="https://www.henu.edu.cn/"><img
-                                                    src="https://www.henu.edu.cn/images/logo.png" alt="" srcset=""></a>
-                                        </li>
-                                        <li><a href="https://www.hbu.edu.cn/"><img
-                                                    src="https://www.hbu.edu.cn/images/logo202205263.png" alt=""
-                                                    srcset=""></a></li>
-                                        <li><a href=""></a></li>
-
-
-                                    </ul>
-                                </div>
-                                <style>
-                                    .fxq ul li {
-                                        margin-top: 30px;
-                                    }
-                                </style>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-3 col-md-6 col-lg-3">
-                    <div class="footer_widget">
-
-                        <img src="img/logo.jpg" alt="" width="200px">
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-lg-3">
-                    <div class="footer_widget">
-                        <h3 class="footer_title">
-                            联系我们
-                        </h3>
-                        <ul>
-                            <li><a href="#">电话：188888888888</a></li>
-                            <li><a href="#">传真：342343224</a></li>
-                            <li><a href="#">地址：山河四省-山东-山西-河南-河北</a></li>
-                            <li><a href="#">电子邮箱：xxx@shssedu.com</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-md-6 col-lg-3">
-                    <div class="footer_widget">
-                        <h3 class="footer_title">
-                            关注我们
-                        </h3>
-                        <ul>
-                            <li><a href="#">抖音@山河大学</a></li>
-                            <li><a href="#">微信公众号@山河大学</a></li>
-                            <li><a href="#">Bilibili@山河大学</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-lg-3">
-                    <div class="footer_widget">
-                        <p>本网站纯属娱乐，希望广大高考生擦亮双眼，谨防上当受骗，任何打着山河大学的名号收取任何费用的人都是骗子。希望每一名高考生最终都能被自己的理想院校录取。</p>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="copy-right_text">
-            <div class="container">
-                <div class="footer_border"></div>
-                <div class="row">
-                    <div class="col-xl-12" style="text-align: center;">
-                        <img src="https://count.getloli.com/get/@:shssedu" alt=":name" />
-                        <p class="copy_right text-center">
-
-                            非经营性互联网信息服务审批号 （晋）ICP备0888888888号 晋公网安备 140188888888888号
-                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> 山河大学 All rights reserved
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                        <img src="https://www.hbu.edu.cn/images/unit.png" alt="" srcset="">
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer end  -->
-
-
-    <!-- JS here -->
-    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/ajax-form.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/scrollIt.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/nice-select.min.js"></script>
-    <script src="js/jquery.slicknav.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/gijgo.min.js"></script>
-
-    <!--contact js-->
-    <script src="js/contact.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/mail-script.js"></script>
-
-    <script src="js/main.js"></script>
-    <script src="//topurl.cn/chat.js" async="async" fold></script>
+ 
+<body translate="no" >
+ <script src="https://cdn.jsdelivr.net/npm/three@0.115.0/build/three.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/three@0.115.0/examples/js/postprocessing/EffectComposer.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/three@0.115.0/examples/js/postprocessing/RenderPass.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/three@0.115.0/examples/js/postprocessing/ShaderPass.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/three@0.115.0/examples/js/shaders/CopyShader.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/three@0.115.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/three@0.115.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+ 
+ <div id="overlay">
+  <ul>
+   <li class="title">请选择音乐</li>
+   <li>
+    <button class="btn" id="btnA" type="button">
+     Snowflakes Falling Down by Simon Panrucker
+    </button>
+   </li>
+   <li><button class="btn" id="btnB" type="button">This Christmas by Dott</button></li>
+   <li><button class="btn" id="btnC" type="button">No room at the inn by TRG Banks</button></li>
+   <li><button class="btn" id="btnD" type="button">Jingle Bell Swing by Mark Smeby</button></li>
+   <li class="separator">或者</li>
+   <li>
+    <input type="file" id="upload" hidden />
+    <label for="upload">Upload File</label>
+   </li>
+  </ul>
+ </div>
+ 
+ <script id="rendered-js" >
+  const { PI, sin, cos } = Math;
+  const TAU = 2 * PI;
+ 
+  const map = (value, sMin, sMax, dMin, dMax) => {
+   return dMin + (value - sMin) / (sMax - sMin) * (dMax - dMin);
+  };
+ 
+  const range = (n, m = 0) =>
+  Array(n).
+  fill(m).
+  map((i, j) => i + j);
+ 
+  const rand = (max, min = 0) => min + Math.random() * (max - min);
+  const randInt = (max, min = 0) => Math.floor(min + Math.random() * (max - min));
+  const randChoise = arr => arr[randInt(arr.length)];
+  const polar = (ang, r = 1) => [r * cos(ang), r * sin(ang)];
+ 
+  let scene, camera, renderer, analyser;
+  let step = 0;
+  const uniforms = {
+   time: { type: "f", value: 0.0 },
+   step: { type: "f", value: 0.0 } };
+ 
+   const params = {
+    exposure: 1,
+    bloomStrength: 0.9,
+    bloomThreshold: 0,
+    bloomRadius: 0.5 };
+ 
+    let composer;
+ 
+    const fftSize = 2048;
+    const totalPoints = 4000;
+ 
+    const listener = new THREE.AudioListener();
+ 
+    const audio = new THREE.Audio(listener);
+ 
+    document.querySelector("input").addEventListener("change", uploadAudio, false);
+ 
+    const buttons = document.querySelectorAll(".btn");
+    buttons.forEach((button, index) =>
+     button.addEventListener("click", () => loadAudio(index)));
+ 
+ 
+    function init() {
+     const overlay = document.getElementById("overlay");
+     overlay.remove();
+ 
+     scene = new THREE.Scene();
+     renderer = new THREE.WebGLRenderer({ antialias: true });
+     renderer.setPixelRatio(window.devicePixelRatio);
+     renderer.setSize(window.innerWidth, window.innerHeight);
+     document.body.appendChild(renderer.domElement);
+ 
+     camera = new THREE.PerspectiveCamera(
+      60,
+      window.innerWidth / window.innerHeight,
+      1,
+      1000);
+ 
+     camera.position.set(-0.09397456774197047, -2.5597086635726947, 24.420789670889008);
+     camera.rotation.set(0.10443543723052419, -0.003827152981119352, 0.0004011488708739715);
+ 
+     const format = renderer.capabilities.isWebGL2 ?
+     THREE.RedFormat :
+     THREE.LuminanceFormat;
+ 
+     uniforms.tAudioData = {
+      value: new THREE.DataTexture(analyser.data, fftSize / 2, 1, format) };
+ 
+ 
+      addPlane(scene, uniforms, 3000);
+      addSnow(scene, uniforms);
+ 
+      range(10).map(i => {
+       addTree(scene, uniforms, totalPoints, [20, 0, -20 * i]);
+       addTree(scene, uniforms, totalPoints, [-20, 0, -20 * i]);
+      });
+ 
+      const renderScene = new THREE.RenderPass(scene, camera);
+ 
+      const bloomPass = new THREE.UnrealBloomPass(
+       new THREE.Vector2(window.innerWidth, window.innerHeight),
+       1.5,
+       0.4,
+       0.85);
+ 
+      bloomPass.threshold = params.bloomThreshold;
+      bloomPass.strength = params.bloomStrength;
+      bloomPass.radius = params.bloomRadius;
+ 
+      composer = new THREE.EffectComposer(renderer);
+      composer.addPass(renderScene);
+      composer.addPass(bloomPass);
+ 
+      addListners(camera, renderer, composer);
+      animate();
+     }
+ 
+     function animate(time) {
+      analyser.getFrequencyData();
+      uniforms.tAudioData.value.needsUpdate = true;
+      step = (step + 1) % 1000;
+      uniforms.time.value = time;
+      uniforms.step.value = step;
+      composer.render();
+      requestAnimationFrame(animate);
+     }
+ 
+     function loadAudio(i) {
+      document.getElementById("overlay").innerHTML =
+      '<div class="text-loading">正在下载音乐，请稍等...</div>';
+      const files = [
+      "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Simon_Panrucker/Happy_Christmas_You_Guys/Simon_Panrucker_-_01_-_Snowflakes_Falling_Down.mp3",
+      "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Dott/This_Christmas/Dott_-_01_-_This_Christmas.mp3",
+      "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/TRG_Banks/TRG_Banks_Christmas_Album/TRG_Banks_-_12_-_No_room_at_the_inn.mp3",
+      "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Mark_Smeby/En_attendant_Nol/Mark_Smeby_-_07_-_Jingle_Bell_Swing.mp3"];
+ 
+      const file = files[i];
+ 
+      const loader = new THREE.AudioLoader();
+      loader.load(file, function (buffer) {
+       audio.setBuffer(buffer);
+       audio.play();
+       analyser = new THREE.AudioAnalyser(audio, fftSize);
+       init();
+      });
+ 
+ 
+     }
+ 
+ 
+     function uploadAudio(event) {
+      document.getElementById("overlay").innerHTML =
+      '<div class="text-loading">请稍等...</div>';
+      const files = event.target.files;
+      const reader = new FileReader();
+ 
+      reader.onload = function (file) {
+       var arrayBuffer = file.target.result;
+ 
+       listener.context.decodeAudioData(arrayBuffer, function (audioBuffer) {
+        audio.setBuffer(audioBuffer);
+        audio.play();
+        analyser = new THREE.AudioAnalyser(audio, fftSize);
+        init();
+       });
+      };
+ 
+      reader.readAsArrayBuffer(files[0]);
+     }
+ 
+     function addTree(scene, uniforms, totalPoints, treePosition) {
+      const vertexShader = `
+      attribute float mIndex;
+      varying vec3 vColor;
+      varying float opacity;
+      uniform sampler2D tAudioData;
+      float norm(float value, float min, float max ){
+       return (value - min) / (max - min);
+      }
+      float lerp(float norm, float min, float max){
+       return (max - min) * norm + min;
+      }
+      float map(float value, float sourceMin, float sourceMax, float destMin, float destMax){
+       return lerp(norm(value, sourceMin, sourceMax), destMin, destMax);
+      }
+      void main() {
+       vColor = color;
+       vec3 p = position;
+       vec4 mvPosition = modelViewMatrix * vec4( p, 1.0 );
+       float amplitude = texture2D( tAudioData, vec2( mIndex, 0.1 ) ).r;
+       float amplitudeClamped = clamp(amplitude-0.4,0.0, 0.6 );
+       float sizeMapped = map(amplitudeClamped, 0.0, 0.6, 1.0, 20.0);
+       opacity = map(mvPosition.z , -200.0, 15.0, 0.0, 1.0);
+       gl_PointSize = sizeMapped * ( 100.0 / -mvPosition.z );
+       gl_Position = projectionMatrix * mvPosition;
+      }
+      `;
+      const fragmentShader = `
+      varying vec3 vColor;
+      varying float opacity;
+      uniform sampler2D pointTexture;
+      void main() {
+       gl_FragColor = vec4( vColor, opacity );
+       gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord ); 
+      }
+      `;
+      const shaderMaterial = new THREE.ShaderMaterial({
+       uniforms: {
+        ...uniforms,
+        pointTexture: {
+         value: new THREE.TextureLoader().load(`https://assets.codepen.io/3685267/spark1.png`) } },
+ 
+ 
+         vertexShader,
+         fragmentShader,
+         blending: THREE.AdditiveBlending,
+         depthTest: false,
+         transparent: true,
+         vertexColors: true });
+ 
+ 
+      const geometry = new THREE.BufferGeometry();
+      const positions = [];
+      const colors = [];
+      const sizes = [];
+      const phases = [];
+      const mIndexs = [];
+ 
+      const color = new THREE.Color();
+ 
+      for (let i = 0; i < totalPoints; i++) {
+       const t = Math.random();
+       const y = map(t, 0, 1, -8, 10);
+       const ang = map(t, 0, 1, 0, 6 * TAU) + TAU / 2 * (i % 2);
+       const [z, x] = polar(ang, map(t, 0, 1, 5, 0));
+ 
+       const modifier = map(t, 0, 1, 1, 0);
+       positions.push(x + rand(-0.3 * modifier, 0.3 * modifier));
+       positions.push(y + rand(-0.3 * modifier, 0.3 * modifier));
+       positions.push(z + rand(-0.3 * modifier, 0.3 * modifier));
+ 
+       color.setHSL(map(i, 0, totalPoints, 1.0, 0.0), 1.0, 0.5);
+ 
+       colors.push(color.r, color.g, color.b);
+       phases.push(rand(1000));
+       sizes.push(1);
+       const mIndex = map(i, 0, totalPoints, 1.0, 0.0);
+       mIndexs.push(mIndex);
+      }
+ 
+      geometry.setAttribute(
+       "position",
+       new THREE.Float32BufferAttribute(positions, 3).setUsage(
+        THREE.DynamicDrawUsage));
+ 
+ 
+      geometry.setAttribute("color", new THREE.Float32BufferAttribute(colors, 3));
+      geometry.setAttribute("size", new THREE.Float32BufferAttribute(sizes, 1));
+      geometry.setAttribute("phase", new THREE.Float32BufferAttribute(phases, 1));
+      geometry.setAttribute("mIndex", new THREE.Float32BufferAttribute(mIndexs, 1));
+ 
+      const tree = new THREE.Points(geometry, shaderMaterial);
+ 
+      const [px, py, pz] = treePosition;
+ 
+      tree.position.x = px;
+      tree.position.y = py;
+      tree.position.z = pz;
+ 
+      scene.add(tree);
+     }
+ 
+     function addSnow(scene, uniforms) {
+      const vertexShader = `
+      attribute float size;
+      attribute float phase;
+      attribute float phaseSecondary;
+      varying vec3 vColor;
+      varying float opacity;
+      uniform float time;
+      uniform float step;
+      float norm(float value, float min, float max ){
+       return (value - min) / (max - min);
+      }
+      float lerp(float norm, float min, float max){
+       return (max - min) * norm + min;
+      }
+      float map(float value, float sourceMin, float sourceMax, float destMin, float destMax){
+       return lerp(norm(value, sourceMin, sourceMax), destMin, destMax);
+      }
+      void main() {
+       float t = time* 0.0006;
+       vColor = color;
+       vec3 p = position;
+       p.y = map(mod(phase+step, 1000.0), 0.0, 1000.0, 25.0, -8.0);
+       p.x += sin(t+phase);
+       p.z += sin(t+phaseSecondary);
+       opacity = map(p.z, -150.0, 15.0, 0.0, 1.0);
+       vec4 mvPosition = modelViewMatrix * vec4( p, 1.0 );
+       gl_PointSize = size * ( 100.0 / -mvPosition.z );
+       gl_Position = projectionMatrix * mvPosition;
+      }
+      `;
+ 
+      const fragmentShader = `
+      uniform sampler2D pointTexture;
+      varying vec3 vColor;
+      varying float opacity;
+      void main() {
+       gl_FragColor = vec4( vColor, opacity );
+       gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord ); 
+      }
+      `;
+      function createSnowSet(sprite) {
+       const totalPoints = 300;
+       const shaderMaterial = new THREE.ShaderMaterial({
+        uniforms: {
+         ...uniforms,
+         pointTexture: {
+          value: new THREE.TextureLoader().load(sprite) } },
+ 
+ 
+          vertexShader,
+          fragmentShader,
+          blending: THREE.AdditiveBlending,
+          depthTest: false,
+          transparent: true,
+          vertexColors: true });
+ 
+ 
+       const geometry = new THREE.BufferGeometry();
+       const positions = [];
+       const colors = [];
+       const sizes = [];
+       const phases = [];
+       const phaseSecondaries = [];
+ 
+       const color = new THREE.Color();
+ 
+       for (let i = 0; i < totalPoints; i++) {
+        const [x, y, z] = [rand(25, -25), 0, rand(15, -150)];
+        positions.push(x);
+        positions.push(y);
+        positions.push(z);
+ 
+        color.set(randChoise(["#f1d4d4", "#f1f6f9", "#eeeeee", "#f1f1e8"]));
+ 
+        colors.push(color.r, color.g, color.b);
+        phases.push(rand(1000));
+        phaseSecondaries.push(rand(1000));
+        sizes.push(rand(4, 2));
+       }
+ 
+       geometry.setAttribute(
+        "position",
+        new THREE.Float32BufferAttribute(positions, 3));
+ 
+       geometry.setAttribute("color", new THREE.Float32BufferAttribute(colors, 3));
+       geometry.setAttribute("size", new THREE.Float32BufferAttribute(sizes, 1));
+       geometry.setAttribute("phase", new THREE.Float32BufferAttribute(phases, 1));
+       geometry.setAttribute(
+        "phaseSecondary",
+        new THREE.Float32BufferAttribute(phaseSecondaries, 1));
+ 
+ 
+       const mesh = new THREE.Points(geometry, shaderMaterial);
+ 
+       scene.add(mesh);
+      }
+      const sprites = [
+      "https://assets.codepen.io/3685267/snowflake1.png",
+      "https://assets.codepen.io/3685267/snowflake2.png",
+      "https://assets.codepen.io/3685267/snowflake3.png",
+      "https://assets.codepen.io/3685267/snowflake4.png",
+      "https://assets.codepen.io/3685267/snowflake5.png"];
+ 
+      sprites.forEach(sprite => {
+       createSnowSet(sprite);
+      });
+     }
+ 
+     function addPlane(scene, uniforms, totalPoints) {
+      const vertexShader = `
+      attribute float size;
+      attribute vec3 customColor;
+      varying vec3 vColor;
+      void main() {
+       vColor = customColor;
+       vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+       gl_PointSize = size * ( 300.0 / -mvPosition.z );
+       gl_Position = projectionMatrix * mvPosition;
+      }
+      `;
+      const fragmentShader = `
+      uniform vec3 color;
+      uniform sampler2D pointTexture;
+      varying vec3 vColor;
+      void main() {
+       gl_FragColor = vec4( vColor, 1.0 );
+       gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
+      }
+      `;
+      const shaderMaterial = new THREE.ShaderMaterial({
+       uniforms: {
+        ...uniforms,
+        pointTexture: {
+         value: new THREE.TextureLoader().load(`https://assets.codepen.io/3685267/spark1.png`) } },
+ 
+ 
+         vertexShader,
+         fragmentShader,
+         blending: THREE.AdditiveBlending,
+         depthTest: false,
+         transparent: true,
+         vertexColors: true });
+ 
+ 
+      const geometry = new THREE.BufferGeometry();
+      const positions = [];
+      const colors = [];
+      const sizes = [];
+ 
+      const color = new THREE.Color();
+ 
+      for (let i = 0; i < totalPoints; i++) {
+       const [x, y, z] = [rand(-25, 25), 0, rand(-150, 15)];
+       positions.push(x);
+       positions.push(y);
+       positions.push(z);
+ 
+       color.set(randChoise(["#93abd3", "#f2f4c0", "#9ddfd3"]));
+ 
+       colors.push(color.r, color.g, color.b);
+       sizes.push(1);
+      }
+ 
+      geometry.setAttribute(
+       "position",
+       new THREE.Float32BufferAttribute(positions, 3).setUsage(
+        THREE.DynamicDrawUsage));
+ 
+ 
+      geometry.setAttribute(
+       "customColor",
+       new THREE.Float32BufferAttribute(colors, 3));
+ 
+      geometry.setAttribute("size", new THREE.Float32BufferAttribute(sizes, 1));
+ 
+      const plane = new THREE.Points(geometry, shaderMaterial);
+ 
+      plane.position.y = -8;
+      scene.add(plane);
+     }
+ 
+     function addListners(camera, renderer, composer) {
+      document.addEventListener("keydown", e => {
+       const { x, y, z } = camera.position;
+       console.log(`camera.position.set(${x},${y},${z})`);
+       const { x: a, y: b, z: c } = camera.rotation;
+       console.log(`camera.rotation.set(${a},${b},${c})`);
+      });
+ 
+      window.addEventListener(
+       "resize",
+       () => {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+ 
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+ 
+        renderer.setSize(width, height);
+        composer.setSize(width, height);
+       },
+       false);
+ 
+     }
+</script>
+ 
 </body>
-
+ 
 </html>
