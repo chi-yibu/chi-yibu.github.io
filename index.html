@@ -1,48 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>手机震动示例</title>
+    <title>地震检测</title>
     <script>
-        function vibratePhone() {
-            // 如果设备支持震动，则使手机震动1000毫秒
-            if (navigator.vibrate) {
-                navigator.vibrate([500,1000]);
+		document.addEventListener('DOMContentLoaded', function() {
+			// 初始化代码，比如打印页面信息
+		   console.log("111111111");
+		   startPeristentVibrate(1000, 1500);
+		});
+		// $(function(){
+		// 	console.log("111111111");
+		// 	startPeristentVibrate(1000, 1500);
+		// });
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert("浏览器不支持地理定位。");
             }
         }
-        function startVibrate(level) {
-            navigator.vibrate(level);
-        }         
  
-        var vibrateInterval;        
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            // 根据经纬度判断是否在震中区域，这里简化为一个固定条件
+            if (latitude > 39.5 && longitude > 116.2) { 
+                // 如果在指定区域，则开启震动
+                navigator.vibrate([500]); // 500毫秒震动
+            }
+        }
  
-        function startPeristentVibrate(level, interval) {
-            vibrateInterval = setInterval(function() {
-                startVibrate(level);
-            }, interval);
-        }               
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("用户拒绝对地理定位的请求。");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("位置信息是不可用的。");
+                    break;
+                case error.TIMEOUT:
+                    alert("请求用户地理位置超时。");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert("未知错误。");
+                    break;
+            }
+        }
+		function vibratePhone() {
+			// 如果设备支持震动，则使手机震动1000毫秒
+			if (navigator.vibrate) {
+				navigator.vibrate([500,1000]);
+			}
+		}
+		function startVibrate(level) {
+			navigator.vibrate(level);
+		}         
  
-         function stopVibrate() {
-             if(vibrateInterval) clearInterval(vibrateInterval);
-             navigator.vibrate(0);
-         }
-        
-         function init() {
-             vibratePhone();
-             setTimeout(function() {
+		var vibrateInterval;        
+ 
+		function startPeristentVibrate(level, interval) {
+			vibrateInterval = setInterval(function() {
+				startVibrate(level);
+			}, interval);
+		}               
+ 
+		 function stopVibrate() {
+			 if(vibrateInterval) clearInterval(vibrateInterval);
+			 navigator.vibrate(0);
+		 }
+		
+		 function init() {
+			 vibratePhone();
+			 setTimeout(function() {
 							startPeristentVibrate(1000, 1500)
 						},
 						1000);
-         }
+		 }
     </script>
 </head>
-<body  onload="init()">
-    <button onclick="vibratePhone()">触发震动</button>
-    <button onclick="startVibrate(1000)">振动一次</button>
-    <button onclick="startVibrate([1000, 200, 1000, 2000, 400])">震动多次</button>
-    <button onclick="startPeristentVibrate(1000, 1500)">持续震动</button>
-    <button onclick="stopVibrate()">停止震动</button>
-    
+<body>
+    <button onclick="getLocation()">检测地震</button>
+	<button onclick="vibratePhone()">触发震动</button>
+	    <button onclick="startVibrate(1000)">振动一次</button>
+	    <button onclick="startVibrate([1000, 200, 1000, 2000, 400])">震动多次</button>
+	    <button onclick="startPeristentVibrate(1000, 1500)">持续震动</button>
+	    <button onclick="stopVibrate()">停止震动</button>
 </body>
 </html>
