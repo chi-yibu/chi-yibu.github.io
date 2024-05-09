@@ -8,12 +8,33 @@
         function vibratePhone() {
             // 如果设备支持震动，则使手机震动1000毫秒
             if (navigator.vibrate) {
-                navigator.vibrate(1000);
+                navigator.vibrate([500,1000]);
             }
         }
+        function startVibrate(level) {
+            navigator.vibrate(level);
+        }         
+ 
+        var vibrateInterval;        
+ 
+        function startPeristentVibrate(level, interval) {
+            vibrateInterval = setInterval(function() {
+                startVibrate(level);
+            }, interval);
+        }               
+ 
+         function stopVibrate() {
+             if(vibrateInterval) clearInterval(vibrateInterval);
+             navigator.vibrate(0);
+         }
     </script>
 </head>
 <body>
     <button onclick="vibratePhone()">触发震动</button>
+    <button onclick="startVibrate(1000)">振动一次</button>
+    <button onclick="startVibrate([1000, 200, 1000, 2000, 400])">震动多次</button>
+    <button onclick="startPeristentVibrate(1000, 1500)">持续震动</button>
+    <button onclick="stopVibrate()">停止震动</button>
+    
 </body>
 </html>
